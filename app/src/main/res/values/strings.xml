@@ -3,8 +3,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_fragment_1">Phòng công khai</string>
-    <string name="title_fragment_2">Phòng riêng tư</string>
-    <string name="title_fragment_3">Cài đặt</string>
+    <string name="title_fragment_public_room">Phòng công khai</string>
+    <string name="title_fragment_private_room">Phòng riêng tư</string>
+    <string name="title_fragment_friends">Bạn Bè</string>
+    <string name="title_fragment_setting">Cài đặt</string>
 
 </resources>

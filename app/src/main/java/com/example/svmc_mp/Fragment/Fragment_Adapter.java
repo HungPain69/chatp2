@@ -24,7 +24,8 @@ public class Fragment_Adapter extends FragmentStatePagerAdapter {
         switch (position){
             case 0: return new TabPhongChatCongKhai();
             case 1: return new TabPhongChatRiengTu();
-            case 2: return new TabCaiDat();
+            case 2: return new TabBanBe();
+            case 3: return new TabCaiDat();
             default: return null;
         }
     }

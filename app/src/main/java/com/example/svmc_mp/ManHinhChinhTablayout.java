@@ -23,23 +23,27 @@ public class ManHinhChinhTablayout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_man_hinh_chinh_tablayout);
         mToolbar = (Toolbar) findViewById(R.id.id_toolbar_man_hinh_chinh);
-        setMyToolBar(mToolbar,getString(R.string.title_fragment_1),false);
+        setMyToolBar(mToolbar,getString(R.string.title_fragment_public_room),false);
 
         //TabLayout
         mTabLayout = (TabLayout) findViewById(R.id.id_tablayout);
         mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
-        mFragment_Adapter = new Fragment_Adapter(ManHinhChinhTablayout.this,getSupportFragmentManager(),3);
+        mFragment_Adapter = new Fragment_Adapter(ManHinhChinhTablayout.this,getSupportFragmentManager(),4);
         mViewPager.setAdapter(mFragment_Adapter);
         mTabLayout.setupWithViewPager(mViewPager);
+
         mTabLayout.getTabAt(0).setIcon(R.drawable.icon_public_white);
         mTabLayout.getTabAt(1).setIcon(R.drawable.icon_group_white);
-        mTabLayout.getTabAt(2).setIcon(R.drawable.icon_settings_white);
+        mTabLayout.getTabAt(2).setIcon(R.drawable.icon_group_white);
+        mTabLayout.getTabAt(3).setIcon(R.drawable.icon_settings_white);
+
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                if(tab.getPosition()==0) setMyToolBar(mToolbar, getString(R.string.title_fragment_1),false);
-                if(tab.getPosition()==1) setMyToolBar(mToolbar, getString(R.string.title_fragment_2),false);
-                if(tab.getPosition()==2) setMyToolBar(mToolbar, getString(R.string.title_fragment_3),false);
+                if(tab.getPosition()==0) setMyToolBar(mToolbar, getString(R.string.title_fragment_public_room),false);
+                if(tab.getPosition()==1) setMyToolBar(mToolbar, getString(R.string.title_fragment_private_room),false);
+                if(tab.getPosition()==2) setMyToolBar(mToolbar, getString(R.string.title_fragment_friends),false);
+                if(tab.getPosition()==3) setMyToolBar(mToolbar, getString(R.string.title_fragment_setting),false);
             }
 
             @Override
