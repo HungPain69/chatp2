@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    //item đầu lắng nghe trạng thái nhấn
+    <item
+        android:state_pressed="true"
+        >
+        <shape>
+            <solid android:color="#3848B3"/>
+        </shape>
+    </item>
+    //item là màu mặc định của nút
+    <item>
+        <shape>
+            <solid android:color="#3700B3"/>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ManHinhChinhTablayout">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/id_toolbar_man_hinh_chinh"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#6200EE"
+        app:titleTextColor="@color/colortexttitle"
+        android:elevation="4dp">
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/id_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@android:color/holo_blue_light"
+        app:tabIndicatorGravity="top"
+        app:tabIndicatorHeight="6dp"
+        app:tabUnboundedRipple="true"
+        app:tabRippleColor="@android:color/holo_blue_light"
+        app:tabBackground="@color/tablayout"
+        >
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+
+
+</LinearLayout>

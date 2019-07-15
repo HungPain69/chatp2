@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SVMC_MP</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_fragment_1">Phòng công khai</string>
+    <string name="title_fragment_2">Phòng riêng tư</string>
+    <string name="title_fragment_3">Cài đặt</string>
+
+</resources>

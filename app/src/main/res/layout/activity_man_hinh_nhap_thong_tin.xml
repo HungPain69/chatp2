@@ -1,0 +1,117 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backg_man_hinh_login"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:textSize="24dp"
+        android:textColor="#FFF"
+        android:text="Cập nhật thông tin" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="Họ tên"
+            android:textSize="18dp"
+            android:textColor="#FFF"
+
+            />
+        <EditText
+            android:id="@+id/id_edt_capnhat_hoten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#EEEBEB"
+            android:textColor="#282828"
+            android:textSize="18dp"
+            android:hint="Nguyễn Đình Đức"
+            android:inputType="textCapWords"
+            android:minLines="1"
+            android:maxLines="1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="Quê quán"
+            android:textSize="18dp"
+            android:textColor="#FFF"
+
+            />
+        <EditText
+            android:id="@+id/id_edt_caphat_quequan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#EEEBEB"
+            android:textColor="#282828"
+            android:textSize="18dp"
+            android:hint="Hà Nội"
+            android:inputType="textCapWords"
+            android:minLines="1"
+            android:maxLines="1"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:text="Ngày sinh"
+            android:textSize="18dp"
+            android:textColor="#FFF"
+            />
+        <EditText
+            android:id="@+id/id_edt_capnhat_ngaysinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#EEEBEB"
+            android:textColor="#282828"
+            android:textSize="18dp"
+            android:hint="24/08/1998"
+            android:inputType="datetime"
+            android:minLines="1"
+            android:maxLines="1"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_btn_capnhat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="36dp"
+        android:paddingVertical="6dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:background="@drawable/hieu_ung_nhan_nut_login"
+        android:textSize="20dp"
+        android:text="Cập nhật"
+        />
+</LinearLayout>

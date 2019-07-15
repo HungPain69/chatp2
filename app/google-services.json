@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "36679839320",
+    "firebase_url": "https://svmcminiproject.firebaseio.com",
+    "project_id": "svmcminiproject",
+    "storage_bucket": "svmcminiproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36679839320:android:ab673fff72e57175",
+        "android_client_info": {
+          "package_name": "com.example.svmc_mp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36679839320-mvk4dktarnn3n3v6jggnhpnup99jprrm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.svmc_mp",
+            "certificate_hash": "1d79eb77f1c657602dfa6322c8b744de6b1dd834"
+          }
+        },
+        {
+          "client_id": "36679839320-3ig6v06771cue15vrvpi4hsk45j2sm83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhkliFOoHrsbQiNkyOGwD9ulQ8ONTnKP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36679839320-3ig6v06771cue15vrvpi4hsk45j2sm83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
