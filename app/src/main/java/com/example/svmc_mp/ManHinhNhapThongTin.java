@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,19 +58,31 @@ public class ManHinhNhapThongTin extends AppCompatActivity {
 //                hashMap.put("hoten", edtHoTen.getText().toString());
 //                hashMap.put("quequan", edtQueQuan.getText().toString());
 //                hashMap.put("ngaysinh", edtNgaySinh.getText().toString());
-                Users users = new Users(username,hoTen,queQuan,ngaySinh);
 
-                myRef.setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            startActivity(new Intent(ManHinhNhapThongTin.this,ManHinhChinhTablayout.class));
+                if(TextUtils.isEmpty(hoTen) || TextUtils.isEmpty(queQuan) || TextUtils.isEmpty(ngaySinh)){
+
+                    Toast.makeText(ManHinhNhapThongTin.this, "Ko dc bo trong", Toast.LENGTH_SHORT).show();
+                }
+                else {
+
+                    Users users = new Users(username,hoTen,queQuan,ngaySinh);
+                    myRef.setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                startActivity(new Intent(ManHinhNhapThongTin.this,ManHinhChinhTablayout.class));
+                            }
+                            else {
+                                Toast.makeText(ManHinhNhapThongTin.this, "Có lỗi nào đó đã xuất hiện", Toast.LENGTH_SHORT).show();
+                            }
                         }
-                        else {
-                            Toast.makeText(ManHinhNhapThongTin.this, "Có lỗi nào đó đã xuất hiện", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                    });
+
+                }
+
+
+
+
 
             }
         });

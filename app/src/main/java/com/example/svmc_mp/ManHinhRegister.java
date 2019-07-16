@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,10 +40,19 @@ public class ManHinhRegister extends AppCompatActivity {
                 String email = edtEmail.getText().toString()+"@svmc.duc";
                 String password = edtPassword.getText().toString();
                 String passwordAgain = edtPasswordAgain.getText().toString();
-                if(password.equals(passwordAgain)==true){
-                    DangKiTaiKhoan(email,password);
-                } else{
-                    Toast.makeText(ManHinhRegister.this,"Mật khẩu không khớp!",Toast.LENGTH_SHORT).show();
+
+                if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(passwordAgain) ){
+
+                    Toast.makeText(ManHinhRegister.this, "Ko dc bo trong", Toast.LENGTH_SHORT).show();
+                }
+                else {
+
+                    if(password.equals(passwordAgain)==true){
+                        DangKiTaiKhoan(email,password);
+                    } else{
+                        Toast.makeText(ManHinhRegister.this,"Mật khẩu không khớp!",Toast.LENGTH_SHORT).show();
+                    }
+
                 }
                 
             }
