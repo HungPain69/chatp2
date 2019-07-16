@@ -41,6 +41,7 @@ public class ManHinhLogin extends AppCompatActivity {
                 if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)){
 
                     Toast.makeText(ManHinhLogin.this, "Ko dc bo trong", Toast.LENGTH_SHORT).show();
+
                 }
                 else {
 
