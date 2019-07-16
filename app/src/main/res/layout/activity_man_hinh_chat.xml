@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ManHinhChat">
+    tools:context=".ManHinhChat"
+    android:background="#262">
 
 
 
@@ -44,5 +45,46 @@
         >
 
     </androidx.viewpager.widget.ViewPager>
+
+
+
+    //layout box nhap tin nhắn
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:padding="3dp"
+
+        >
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_text"
+            android:hint="Nhập tin nhắn ..."
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/send_btn"
+            android:background="@color/fui_transparent"
+
+            />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/send_btn"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_action_button_send"
+            android:background="@color/fui_transparent"
+
+
+            />
+
+    </RelativeLayout>
+
+
+
+
+
 
 </LinearLayout>
