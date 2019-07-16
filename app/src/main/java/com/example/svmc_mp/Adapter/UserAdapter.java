@@ -2,6 +2,7 @@ package com.example.svmc_mp.Adapter;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.svmc_mp.DoiTuong.Users;
+import com.example.svmc_mp.ManHinhChat;
 import com.example.svmc_mp.R;
 
 import java.util.List;
@@ -37,11 +39,21 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Users nguoiDung = mUsers.get(position);
+        final Users nguoiDung = mUsers.get(position);
         holder.tenBanBe.setText(nguoiDung.getHoTen());
 
 //        if(nguoiDung.get)
 
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ManHinhChat.class);
+                intent.putExtra("username",nguoiDung.getUsername());
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -61,6 +73,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
 
             tenBanBe =  itemView.findViewById(R.id.user_name_tab_ban_be);
 //            anhAvatar = itemView.findViewById(R.id.profile_image);
+
+
+
+
 
         }
     }

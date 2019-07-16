@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ManHinhNhapThongTin"></activity>
+        <activity android:name=".ManHinhChat"></activity>
+        <activity android:name=".ManHinhNhapThongTin" />
         <activity android:name=".ManHinhRegister" />
         <activity android:name=".ManHinhChinhTablayout" />
         <activity android:name=".ManHinhLogin">
