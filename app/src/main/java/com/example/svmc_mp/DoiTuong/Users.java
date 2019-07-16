@@ -1,10 +1,12 @@
 package com.example.svmc_mp.DoiTuong;
 
 public class Users {
+    private String id;
     private String username;
     private String hoTen;
     private String queQuan;
     private String ngaySinh;
+
     public Users() {
     }
 
@@ -13,6 +15,22 @@ public class Users {
         this.hoTen = hoTen;
         this.queQuan = queQuan;
         this.ngaySinh = ngaySinh;
+    }
+
+    public Users(String id , String username, String hoTen, String queQuan, String ngaySinh) {
+        this.id = id;
+        this.username = username;
+        this.hoTen = hoTen;
+        this.queQuan = queQuan;
+        this.ngaySinh = ngaySinh;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getUsername() {

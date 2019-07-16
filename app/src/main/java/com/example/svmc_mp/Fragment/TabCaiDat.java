@@ -59,7 +59,7 @@ public class TabCaiDat extends Fragment {
                 tvQueQuan.setText(tvQueQuan.getText().toString()+users.getQueQuan());
                 tvNgaySinh.setText(tvNgaySinh.getText().toString()+users.getNgaySinh());
                 String ten = users.getHoTen();
-                int i = ten.lastIndexOf(" ");
+                int i = ten.lastIndexOf(' ');
                 if(i==-1){
                     setAvatar(ten.charAt(0));
                 }

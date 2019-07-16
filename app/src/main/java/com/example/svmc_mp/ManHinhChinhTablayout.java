@@ -33,7 +33,7 @@ public class ManHinhChinhTablayout extends AppCompatActivity {
         mTabLayout.setupWithViewPager(mViewPager);
 
         mTabLayout.getTabAt(0).setIcon(R.drawable.icon_public_white);
-        mTabLayout.getTabAt(1).setIcon(R.drawable.icon_group_white);
+        mTabLayout.getTabAt(1).setIcon(R.drawable.ic_action_chat );
         mTabLayout.getTabAt(2).setIcon(R.drawable.icon_group_white);
         mTabLayout.getTabAt(3).setIcon(R.drawable.icon_settings_white);
 

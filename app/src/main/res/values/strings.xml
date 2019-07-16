@@ -7,5 +7,6 @@
     <string name="title_fragment_private_room">Phòng riêng tư</string>
     <string name="title_fragment_friends">Bạn Bè</string>
     <string name="title_fragment_setting">Cài đặt</string>
+    <string name="user_name">User name</string>
 
 </resources>
