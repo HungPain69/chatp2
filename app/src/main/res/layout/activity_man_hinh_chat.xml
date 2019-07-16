@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +9,7 @@
     android:background="#262">
 
 
-
+    //Toolbar
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/id_toolbar_man_hinh_chat"
         android:layout_width="match_parent"
@@ -37,23 +37,27 @@
             />
 
     </androidx.appcompat.widget.Toolbar>
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/id_viewpager_mh_chat"
+
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        >
+        android:layout_height="match_parent"
+        android:id="@+id/recycle_view_man_hinh_chat"
+        android:layout_below="@+id/id_toolbar_man_hinh_chat"
+        android:layout_above="@+id/input_message_box"
+        />
 
-    </androidx.viewpager.widget.ViewPager>
 
 
 
-    //layout box nhap tin nhắn
+    //layout box input nhap tin nhắn
     <RelativeLayout
+        android:id="@+id/input_message_box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
         android:padding="3dp"
+        android:layout_alignParentBottom="true"
 
         >
 
@@ -87,4 +91,4 @@
 
 
 
-</LinearLayout>
+</RelativeLayout>
