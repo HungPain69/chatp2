@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ManHinhChat"
-    android:background="#262">
+    android:background="#fff">
 
 
     //Toolbar
@@ -14,7 +14,7 @@
         android:id="@+id/id_toolbar_man_hinh_chat"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#6200EE"
+        android:background="@color/mainColor"
         app:titleTextColor="@color/colortexttitle"
         android:elevation="4dp">
 
@@ -55,7 +55,7 @@
         android:id="@+id/input_message_box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
+        android:background="#edeae8"
         android:padding="3dp"
         android:layout_alignParentBottom="true"
 

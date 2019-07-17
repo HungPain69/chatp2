@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -14,6 +16,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.svmc_mp.Adapter.MessageAdapter;
+import com.example.svmc_mp.DoiTuong.Chatting;
 import com.example.svmc_mp.DoiTuong.Users;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,7 +28,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -39,6 +45,10 @@ public class ManHinhChat extends AppCompatActivity {
 
     ImageButton send_button;
     EditText message_text;
+
+    MessageAdapter messageAdapter;
+    List<Chatting> mchat;
+    RecyclerView recyclerView;
 
     Intent intent;
 
@@ -62,7 +72,12 @@ public class ManHinhChat extends AppCompatActivity {
             }
         });
 
-
+        //////
+        recyclerView = findViewById(R.id.recycle_view_man_hinh_chat);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
 
 
         ten_ban_chat = findViewById(R.id.ten_bb_toolbar_chat);
@@ -84,7 +99,11 @@ public class ManHinhChat extends AppCompatActivity {
                     Toast.makeText(ManHinhChat.this, "Hãy viết cho nhau", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    sendMess(firebaseUser.getEmail(),username, mess);
+
+                    String sender = firebaseUser.getEmail();
+                    String []arr=sender.split("@");
+                    sender=arr[0];
+                    sendMess(sender,username, mess);
                 }
 
                 //clear box input mess
@@ -103,6 +122,12 @@ public class ManHinhChat extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Users users = dataSnapshot.getValue(Users.class);
                 ten_ban_chat.setText(users.getHoTen());
+
+                String sender = firebaseUser.getEmail();
+                String []arr=sender.split("@");
+                sender=arr[0];
+
+                readMess(sender,username);
 
             }
             @Override
@@ -136,4 +161,41 @@ public class ManHinhChat extends AppCompatActivity {
       reference.child("Chatting").push().setValue(hashMap);
     }
 
+
+
+    private void readMess(final String nguoiGui, final String nguoiNhan){
+        mchat = new ArrayList<>();
+        reference= FirebaseDatabase.getInstance().getReference("Chatting");
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                mchat.clear();
+                for (DataSnapshot snapshot: dataSnapshot.getChildren()){
+                    Chatting chatting = snapshot.getValue(Chatting.class);
+
+                    String ng = chatting.getNguoiGui();
+                    String nn = chatting.getNguoiNhan();
+
+                    String ngui = nguoiGui;
+                    String nNhan = nguoiNhan;
+
+
+
+                    if(chatting.getNguoiNhan().equals(nguoiGui) && chatting.getNguoiGui().equals(nguoiNhan) ||
+                            chatting.getNguoiNhan().equals(nguoiNhan) && chatting.getNguoiGui().equals(nguoiGui)){
+
+                        mchat.add(chatting);
+                    }
+
+                    messageAdapter = new MessageAdapter(ManHinhChat.this,mchat);
+                    recyclerView.setAdapter(messageAdapter);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
 }

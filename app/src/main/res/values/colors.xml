@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="tablayout">#6200EE</color>
     <color name="colortexttitle">#FFFFFF</color>
+    <color name="bubbleChat">#edeae8</color>
+    <color name="mainColor">#6200EE</color>
 </resources>
