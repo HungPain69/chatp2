@@ -18,7 +18,7 @@
 
     <!-- bán kính đường bo tròn ở 4 góc -->
     <corners
-        android:radius="18sp" >
+        android:radius="40sp" >
     </corners>
 
 </shape>

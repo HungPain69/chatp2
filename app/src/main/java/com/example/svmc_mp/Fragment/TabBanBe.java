@@ -70,11 +70,16 @@ public class TabBanBe extends Fragment {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Users users = snapshot.getValue(Users.class);
 
+                    String currenUsr = firebaseUser.getEmail();
+                    String []arr=currenUsr.split("@");
 
+                    String currentUser=arr[0];
+
+                    if(!currentUser.equals(users.getUsername())) {
 
 
                         mUsers.add(users);
-
+                    }
                 }
 
 //                mUsers.add({});
