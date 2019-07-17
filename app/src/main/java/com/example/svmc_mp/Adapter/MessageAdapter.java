@@ -71,8 +71,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         public TextView show_mess;
 //        public ImageView anhAvatar;
 
-
-        public ViewHolder(@NonNull View itemView) {          //contructor
+        //contructor
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             show_mess =  itemView.findViewById(R.id.mess_show);
@@ -87,10 +87,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         String currenUsr = firebaseUser.getEmail();
         String []arr=currenUsr.split("@");
-
         String currentUser=arr[0];
 
-        String getNguoiGuiTrongModelChat =mchat.get(position).getNguoiGui();
+//        String getNguoiGuiTrongModelChat =mchat.get(position).getNguoiGui();
 
 
 //        Log.d("a", "onClick"+getNguoiGuiTrongModelChat);

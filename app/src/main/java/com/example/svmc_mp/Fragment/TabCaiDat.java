@@ -78,7 +78,7 @@ public class TabCaiDat extends Fragment {
                 if(i==-1){
                     setAvatar(ten.charAt(0));
                 }
-                else setAvatar(ten.charAt(i+1));
+                else setAvatar(ten.charAt(i+2));
             }
             @Override
             public void onCancelled(DatabaseError error) {
