@@ -64,7 +64,7 @@ public class ManHinhChat extends AppCompatActivity {
 
        //toolbar
         mToolbar = (Toolbar) findViewById(R.id.id_toolbar_man_hinh_chat);
-        setMyToolBar(mToolbar,"",false);
+        setMyToolBar(mToolbar,"",true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

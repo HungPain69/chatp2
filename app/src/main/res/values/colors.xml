@@ -7,4 +7,5 @@
     <color name="colortexttitle">#FFFFFF</color>
     <color name="bubbleChat">#edeae8</color>
     <color name="mainColor">#6200EE</color>
+    <color name="colorHint">#aeafaf</color>
 </resources>

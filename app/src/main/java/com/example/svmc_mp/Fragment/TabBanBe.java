@@ -72,8 +72,7 @@ public class TabBanBe extends Fragment {
 
 
 
-                        assert users != null;
-                        assert firebaseUser!= null;
+
                         mUsers.add(users);
 
                 }

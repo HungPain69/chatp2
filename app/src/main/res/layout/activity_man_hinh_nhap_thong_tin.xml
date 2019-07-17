@@ -37,6 +37,7 @@
             android:textColor="#282828"
             android:textSize="18dp"
             android:hint="Nguyễn Đình Đức"
+            android:textColorHint="@color/colorHint"
             android:inputType="textCapWords"
             android:minLines="1"
             android:maxLines="1"
@@ -52,7 +53,7 @@
         <TextView
             android:layout_width="88dp"
             android:layout_height="wrap_content"
-            android:text="Quê quán"
+            android:text="Địa chỉ"
             android:textSize="18dp"
             android:textColor="#FFF"
 
@@ -66,6 +67,7 @@
             android:textColor="#282828"
             android:textSize="18dp"
             android:hint="Hà Nội"
+            android:textColorHint="@color/colorHint"
             android:inputType="textCapWords"
             android:minLines="1"
             android:maxLines="1"
@@ -94,6 +96,7 @@
             android:textColor="#282828"
             android:textSize="18dp"
             android:hint="24/08/1998"
+            android:textColorHint="@color/colorHint"
             android:inputType="datetime"
             android:minLines="1"
             android:maxLines="1"

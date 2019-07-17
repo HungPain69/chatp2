@@ -67,6 +67,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/message_text"
             android:hint="Nhập tin nhắn ..."
+            android:textColorHint="@color/colorHint"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/send_btn"
             android:background="@color/fui_transparent"

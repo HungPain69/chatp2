@@ -13,7 +13,9 @@
         <activity android:name=".ManHinhNhapThongTin" />
         <activity android:name=".ManHinhRegister" />
         <activity android:name=".ManHinhChinhTablayout" />
-        <activity android:name=".ManHinhLogin">
+        <activity android:name=".ManHinhLogin"
+                  >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
