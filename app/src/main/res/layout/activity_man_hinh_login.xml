@@ -1,4 +1,4 @@
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,6 +6,8 @@
     android:orientation="vertical"
     >
     <TextView
+        android:id="@+id/Chat_Room"
+        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -14,24 +16,27 @@
         android:textStyle="bold|italic"
         android:textColor="#FFF"
         android:text="Chat Room" />
+
     <EditText
         android:id="@+id/id_edt_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:layout_marginTop="55dp"
+        android:layout_below="@id/Chat_Room"
         android:layout_marginLeft="35dp"
+        android:layout_marginTop="60dp"
         android:layout_marginRight="35dp"
-        android:background="#EEEBEB"
-        android:textColor="#282828"
-        android:textSize="20dp"
+        android:background="@drawable/bgnd_input_login"
         android:hint="Username"
-        android:textColorHint="@color/colorHint"
         android:inputType="text"
-        android:minLines="1"
         android:maxLines="1"
-        />
+        android:minLines="1"
+        android:padding="15dp"
+        android:textColor="#282828"
+        android:textColorHint="@color/colorHint"
+        android:textSize="20dp" />
     <EditText
+
+        android:layout_below="@id/id_edt_username"
         android:id="@+id/id_edt_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +44,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
-        android:background="#EEEBEB"
+        android:background="@drawable/bgnd_input_login"
         android:textColor="#282828"
         android:textSize="20dp"
         android:hint="Password"
@@ -50,27 +55,30 @@
         />
     <Button
         android:id="@+id/id_btn_login"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/id_edt_password"
+        android:layout_centerHorizontal="true"
         android:padding="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:textAllCaps="false"
-        android:textColor="#FFF"
+        android:textColor="#000000"
         android:background="@drawable/hieu_ung_nhan_nut_login"
         android:textSize="20dp"
         android:text="Login"
         />
     <TextView
         android:id="@+id/id_textview_signup"
+        android:layout_below="@id/id_btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="Sign up"
-        android:textSize="20dp"
-        android:textColor="#FFF"
+        android:layout_marginTop="5dp"
+        android:text="Have no account?"
+        android:textSize="18dp"
+        android:textColor="#000"
         android:clickable="true"
         />
-</LinearLayout>
+</RelativeLayout>

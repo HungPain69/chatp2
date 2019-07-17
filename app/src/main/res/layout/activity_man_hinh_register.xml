@@ -1,4 +1,4 @@
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,9 +6,11 @@
     android:orientation="vertical"
     >
     <TextView
+        android:id="@+id/Chat_room_regis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
         android:textSize="70dp"
         android:textStyle="bold|italic"
@@ -16,13 +18,14 @@
         android:text="Chat Room" />
     <EditText
         android:id="@+id/id_edt_register_username"
+        android:layout_below="@id/Chat_room_regis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:layout_marginTop="55dp"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
-        android:background="#EEEBEB"
+        android:background="@drawable/bgnd_input_login"
         android:textColor="#282828"
         android:textSize="20dp"
         android:hint="Username"
@@ -32,6 +35,7 @@
         android:maxLines="1"
         />
     <EditText
+        android:layout_below="@id/id_edt_register_username"
         android:id="@+id/id_edt_register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +43,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
-        android:background="#EEEBEB"
+        android:background="@drawable/bgnd_input_login"
         android:textColor="#282828"
         android:textSize="20dp"
         android:hint="Password"
@@ -49,13 +53,14 @@
         />
     <EditText
         android:id="@+id/id_edt_regiter_password_again"
+        android:layout_below="@+id/id_edt_register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
-        android:background="#EEEBEB"
+        android:background="@drawable/bgnd_input_login"
         android:textColor="#282828"
         android:textSize="20dp"
         android:hint="Password again"
@@ -66,16 +71,18 @@
         />
     <Button
         android:id="@+id/id_btn_register"
-        android:layout_width="match_parent"
+        android:layout_below="@id/id_edt_regiter_password_again"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="35dp"
         android:layout_marginRight="35dp"
         android:textAllCaps="false"
-        android:textColor="#FFF"
+        android:textColor="#0a0e38"
         android:background="@drawable/hieu_ung_nhan_nut_login"
         android:textSize="20dp"
         android:text="Register"
+        android:layout_centerHorizontal="true"
         />
-</LinearLayout>
+</RelativeLayout>

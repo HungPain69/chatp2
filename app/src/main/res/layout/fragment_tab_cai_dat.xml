@@ -52,7 +52,7 @@
         android:paddingVertical="6dp"
         android:background="@drawable/hieu_ung_nhan_nut_login"
         android:textAllCaps="false"
-        android:textColor="#FFF"
+        android:textColor="#000"
         android:text="Đăng xuất"
         android:textSize="20dp"
         />
