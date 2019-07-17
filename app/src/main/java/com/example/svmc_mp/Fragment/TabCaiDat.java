@@ -1,6 +1,7 @@
 package com.example.svmc_mp.Fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -18,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.svmc_mp.DoiTuong.Users;
+import com.example.svmc_mp.ManHinhLogin;
 import com.example.svmc_mp.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -44,6 +46,18 @@ public class TabCaiDat extends Fragment {
         tvQueQuan = (TextView) view.findViewById(R.id.id_tv_thongtin_quequan);
         tvNgaySinh = (TextView) view.findViewById(R.id.id_tv_thongtin_ngaysinh);
         imgAvatar = (ImageView) view.findViewById(R.id.id_img_avatar);
+        btnDangXuat = view.findViewById(R.id.id_btn_dangxuat);
+
+        // Logout khi click button Đăn xuất
+        btnDangXuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getActivity(), ManHinhLogin.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         String s = currentUser.getEmail();
