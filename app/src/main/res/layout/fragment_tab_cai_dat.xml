@@ -23,21 +23,21 @@
         android:id="@+id/id_tv_thongtin_hoten"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Họ tên: "
+        android:text="Họ tên       : "
         android:textSize="18dp"
         />
     <TextView
         android:id="@+id/id_tv_thongtin_quequan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quê quán: "
+        android:text="Địa chỉ       : "
         android:textSize="18dp"
         />
     <TextView
         android:id="@+id/id_tv_thongtin_ngaysinh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ngày sinh: "
+        android:text="Ngày sinh  : "
         android:textSize="18dp"
         />
 
