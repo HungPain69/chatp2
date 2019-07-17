@@ -51,26 +51,30 @@
 
 
     //layout box input nhap tin nhắn
-    <RelativeLayout
-        android:id="@+id/input_message_box"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#edeae8"
-        android:padding="3dp"
-        android:layout_alignParentBottom="true"
-
-        >
 
 
-        <EditText
+        <LinearLayout
+            android:id="@+id/id_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+
+            >
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+
+            android:isScrollContainer="true"
             android:id="@+id/message_text"
             android:hint="Nhập tin nhắn ..."
             android:textColorHint="@color/colorHint"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/send_btn"
-            android:background="@color/fui_transparent"
+            android:background="@drawable/bo_thanh_nhap_tin_nhan"
 
             />
 
@@ -78,14 +82,15 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/send_btn"
-            android:layout_alignParentRight="true"
+            
             android:src="@drawable/ic_action_button_send"
             android:background="@color/fui_transparent"
 
 
             />
+        </LinearLayout>
 
-    </RelativeLayout>
+
 
 
 

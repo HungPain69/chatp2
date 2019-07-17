@@ -57,7 +57,8 @@ public class TabCaiDat extends Fragment {
                 getActivity().startActivity(intent);
             }
         });
-        
+
+        //setText để hiển thị thông tin trên màn hình cài đặt
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         String s = currentUser.getEmail();
@@ -87,6 +88,8 @@ public class TabCaiDat extends Fragment {
         return view;
     }
 
+
+    //set avatar theo kí tự đầu tiên của tên
     private void setAvatar(char ch) {
         switch (ch){
             case 'A':

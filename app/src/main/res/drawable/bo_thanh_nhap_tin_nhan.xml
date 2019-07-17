@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Set màu nền-->
+    <solid
+        android:color="#DDDDDD" >
+    </solid>
+
+    <!-- căn lề-->
+    <padding
+        android:left="18sp"
+        android:right="18sp"
+        android:top="12sp"
+        android:bottom="12sp" >
+    </padding>
+
+    <!-- bán kính đường bo tròn ở 4 góc -->
+    <corners
+        android:radius="18sp" >
+    </corners>
+
+</shape>

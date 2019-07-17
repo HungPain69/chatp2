@@ -27,7 +27,8 @@
             android:layout_toRightOf="@+id/avatar_receiver"
             android:text="adddddddddsdsdad"
             android:padding="8dp"
-            android:background="@color/bubbleChat"
+            android:background="@drawable/bo_tron_canh_tin_nhan_nhan_ve"
+
             />
 
     </RelativeLayout>
