@@ -40,7 +40,7 @@ public class ManHinhLogin extends AppCompatActivity {
                 String password = edtPassword.getText().toString();
                 if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)){
 
-                    Toast.makeText(ManHinhLogin.this, "Ko dc bo trong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ManHinhLogin.this, "Bạn chưa điền thông tin kìa !!", Toast.LENGTH_SHORT).show();
 
                 }
                 else {

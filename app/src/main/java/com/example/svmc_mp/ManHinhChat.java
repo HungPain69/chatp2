@@ -96,7 +96,7 @@ public class ManHinhChat extends AppCompatActivity {
                 String mess = message_text.getText().toString();
 
                 if(mess.equals("")){
-                    Toast.makeText(ManHinhChat.this, "Hãy viết cho nhau", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ManHinhChat.this, "Let's say something together", Toast.LENGTH_SHORT).show();
                 }
                 else{
 

@@ -43,7 +43,7 @@ public class ManHinhRegister extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(passwordAgain) ){
 
-                    Toast.makeText(ManHinhRegister.this, "Ko dc bo trong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ManHinhRegister.this, "Hãy hoàn thành thông tin đăng kí", Toast.LENGTH_SHORT).show();
                 }
                 else {
 

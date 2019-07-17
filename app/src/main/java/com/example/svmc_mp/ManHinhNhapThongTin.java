@@ -59,9 +59,9 @@ public class ManHinhNhapThongTin extends AppCompatActivity {
 //                hashMap.put("quequan", edtQueQuan.getText().toString());
 //                hashMap.put("ngaysinh", edtNgaySinh.getText().toString());
 
-                if(TextUtils.isEmpty(hoTen) || TextUtils.isEmpty(queQuan) || TextUtils.isEmpty(ngaySinh)){
+                if(TextUtils.isEmpty(hoTen) ){
 
-                    Toast.makeText(ManHinhNhapThongTin.this, "Ko dc bo trong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ManHinhNhapThongTin.this, "Tên của bạn là gì ????", Toast.LENGTH_SHORT).show();
                 }
                 else {
 
