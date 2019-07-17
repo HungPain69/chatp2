@@ -75,7 +75,7 @@ public class ManHinhLogin extends AppCompatActivity {
 //                            updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(ManHinhLogin.this, "Authentication failed.",
+                            Toast.makeText(ManHinhLogin.this, "Có gì đó sai sai ...",
                                     Toast.LENGTH_SHORT).show();
 //                            updateUI(null);
                         }
